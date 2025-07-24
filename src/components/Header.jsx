@@ -23,12 +23,12 @@ const Header = ({ isLoggedin, setIsLoggedin }) => {
             <div className="flex items-center">
               <div className="flex-shrink-0">
                 <div className="flex items-center">
-                  <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-lg">E</span>
-                  </div>
-                  <span className="ml-3 text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+                  <Link to={"/"} className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                    <Link to={"/"} className="cursor-pointer text-white font-bold text-lg">E</Link>
+                  </Link>
+                  <Link to={"/"} className="cursor-pointer ml-3 text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
                     Empower
-                  </span>
+                  </Link>
                 </div>
               </div>
             </div>
