@@ -5,7 +5,7 @@ import { useState } from "react";
 const Header = ({ isLoggedin, setIsLoggedin }) => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
-  const [menuOpen, setMenuOpen] = useState(false); // New state for mobile menu
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleClick = () => {
     setIsLoggedin(false);
@@ -19,7 +19,6 @@ const Header = ({ isLoggedin, setIsLoggedin }) => {
       <nav className="fixed top-0 w-full z-50 bg-gray-900 shadow-md border-b border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            {/* Logo Section */}
             <div className="flex items-center">
               <div className="flex-shrink-0">
                 <div className="flex items-center">
@@ -32,8 +31,6 @@ const Header = ({ isLoggedin, setIsLoggedin }) => {
                 </div>
               </div>
             </div>
-
-            {/* Hamburger Icon (Mobile Only) */}
             <div className="md:hidden">
               <button
                 onClick={() => setMenuOpen(!menuOpen)}
@@ -64,25 +61,21 @@ const Header = ({ isLoggedin, setIsLoggedin }) => {
                 </svg>
               </button>
             </div>
-
-            {/* Desktop Navigation */}
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 <Link
                   to="/"
-                  className={`px-4 py-2 rounded-full font-semibold  ${
-                    pathname == "/" ? "text-blue-400 bg-gray-800" : "text-white"
-                  } hover:bg-gray-700 hover:text-white transition duration-300`}
+                  className={`px-4 py-2 rounded-full font-semibold  ${pathname == "/" ? "text-blue-400 bg-gray-800" : "text-white"
+                    } hover:bg-gray-700 hover:text-white transition duration-300`}
                 >
                   Home
                 </Link>
                 <Link
                   to="/about"
-                  className={`px-4 py-2 rounded-full font-semibold ${
-                    pathname == "/about"
+                  className={`px-4 py-2 rounded-full font-semibold ${pathname == "/about"
                       ? "text-blue-400 bg-gray-800"
                       : "text-white"
-                  } hover:text-blue-400 hover:bg-gray-800 transition duration-300`}
+                    } hover:text-blue-400 hover:bg-gray-800 transition duration-300`}
                 >
                   About
                 </Link>
@@ -90,11 +83,10 @@ const Header = ({ isLoggedin, setIsLoggedin }) => {
                 {isLoggedin && (
                   <Link
                     to="/employee"
-                    className={`px-4 py-2 rounded-full font-semibold ${
-                      pathname == "/employee"
+                    className={`px-4 py-2 rounded-full font-semibold ${pathname == "/employee"
                         ? "text-blue-400 bg-gray-800"
                         : "text-white"
-                    } hover:text-blue-400 hover:bg-gray-800 transition duration-300`}
+                      } hover:text-blue-400 hover:bg-gray-800 transition duration-300`}
                   >
                     Employee
                   </Link>
@@ -118,25 +110,21 @@ const Header = ({ isLoggedin, setIsLoggedin }) => {
               </div>
             </div>
           </div>
-
-          {/* Mobile Navigation */}
           {menuOpen && (
             <div className="md:hidden mt-4 space-y-2 pb-4">
               <Link
                 to="/"
                 onClick={() => setMenuOpen(false)}
-                className={`block px-4 py-2 rounded-full font-semibold ${
-                  pathname == "/" ? "text-blue-400 bg-gray-800" : "text-white"
-                } hover:bg-gray-700 hover:text-white transition duration-300`}
+                className={`block px-4 py-2 rounded-full font-semibold ${pathname == "/" ? "text-blue-400 bg-gray-800" : "text-white"
+                  } hover:bg-gray-700 hover:text-white transition duration-300`}
               >
                 Home
               </Link>
               <Link
                 to="/about"
                 onClick={() => setMenuOpen(false)}
-                className={`block px-4 py-2 rounded-full font-semibold ${
-                  pathname == "/about" ? "text-blue-400 bg-gray-800" : "text-white"
-                } hover:text-blue-400 hover:bg-gray-800 transition duration-300`}
+                className={`block px-4 py-2 rounded-full font-semibold ${pathname == "/about" ? "text-blue-400 bg-gray-800" : "text-white"
+                  } hover:text-blue-400 hover:bg-gray-800 transition duration-300`}
               >
                 About
               </Link>
@@ -145,9 +133,8 @@ const Header = ({ isLoggedin, setIsLoggedin }) => {
                 <Link
                   to="/employee"
                   onClick={() => setMenuOpen(false)}
-                  className={`block px-4 py-2 rounded-full font-semibold ${
-                    pathname == "/employee" ? "text-blue-400 bg-gray-800" : "text-white"
-                  } hover:text-blue-400 hover:bg-gray-800 transition duration-300`}
+                  className={`block px-4 py-2 rounded-full font-semibold ${pathname == "/employee" ? "text-blue-400 bg-gray-800" : "text-white"
+                    } hover:text-blue-400 hover:bg-gray-800 transition duration-300`}
                 >
                   Employee
                 </Link>

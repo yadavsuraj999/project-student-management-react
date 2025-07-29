@@ -1,7 +1,4 @@
-import { useNavigate } from 'react-router-dom';
-
 const Home = () => {
-    const navigate = useNavigate();
 
     return (
         <div className="pt-16 bg-gray-900 text-gray-200 min-h-screen">
