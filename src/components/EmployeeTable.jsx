@@ -41,7 +41,7 @@ const EmployeeTable = ({ employee, onDelete, sortArr, sorting }) => {
                   className="hover:bg-gray-700 transition-colors duration-200 group"
                 >
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="flex items-center justify-center w-8 h-8 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-full text-sm font-bold">
+                    <div className="flex items-center justify-center w-8 h-8 from-blue-600 to-indigo-700 text-white  text-sm font-bold">
                       {idx + 1}
                     </div>
                   </td>
@@ -56,11 +56,11 @@ const EmployeeTable = ({ employee, onDelete, sortArr, sorting }) => {
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="text-lg font-semibold text-green-400">
-                      ${Number(emp.salary).toLocaleString()}
+                      💲{Number(emp.salary).toLocaleString()}
                     </div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <span className="inline-flex px-3 py-1 text-sm font-semibold rounded-full bg-blue-600 text-blue-200">
+                    <span className="inline-flex px-3 py-1 text-sm font-semibold text-white">
                       {
                         emp.department
                       }
@@ -72,13 +72,13 @@ const EmployeeTable = ({ employee, onDelete, sortArr, sorting }) => {
                         to={`/edit-employee/${emp.id}`}
                         className="bg-gradient-to-r from-blue-700 to-indigo-700 text-white px-4 py-2 rounded-lg font-medium hover:from-indigo-600 hover:to-blue-600 transition-all duration-200 transform hover:scale-105"
                       >
-                        ✏️ Edit
+                       Edit
                       </Link>
                       <button
                         className="bg-red-700 text-red-200 px-4 py-2 rounded-lg font-medium hover:bg-red-600 hover:text-white transition-all duration-200 transform hover:scale-105"
                         onClick={() => handleDelete(emp.id)}
                       >
-                        🗑️ Delete
+                       Delete
                       </button>
                     </div>
                   </td>
