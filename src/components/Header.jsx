@@ -22,9 +22,9 @@ const Header = ({ isLoggedin, setIsLoggedin }) => {
             <div className="flex items-center">
               <div className="flex-shrink-0">
                 <div className="flex items-center">
-                  <Link to={"/"} className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                    <Link to={"/"} className="cursor-pointer text-white font-bold text-lg">E</Link>
-                  </Link>
+                  <Link to={"/"} className="w-10 h-10 cursor-pointer text-white  text-lg font-bold bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                    E
+                 </Link>
                   <Link to={"/"} className="cursor-pointer ml-3 text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
                     Empower
                   </Link>
@@ -63,11 +63,8 @@ const Header = ({ isLoggedin, setIsLoggedin }) => {
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <Link
-                  to="/"
-                  className={`px-4 py-2 rounded-full font-semibold  ${pathname == "/" ? "text-blue-400 bg-gray-800" : "text-white"
-                    } hover:bg-gray-700 hover:text-white transition duration-300`}
-                >
+                <Link to="/" className={`px-4 py-2 rounded-full font-semibold  ${pathname == '/' ? "text-blue-400 bg-gray-800" 
+                : "text-white" } hover:bg-gray-700 hover:text-white transition duration-300`}>
                   Home
                 </Link>
                 <Link

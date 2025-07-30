@@ -70,12 +70,12 @@ const EmployeeTable = ({ employee, onDelete, sortArr, sorting }) => {
                     <div className="flex justify-center space-x-3">
                       <Link
                         to={`/edit-employee/${emp.id}`}
-                        className="bg-gradient-to-r from-blue-700 to-indigo-700 text-white px-4 py-2 rounded-lg font-medium hover:from-indigo-600 hover:to-blue-600 transition-all duration-200 transform hover:scale-105"
+                        className="text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-600 hover:text-white transition-all duration-200 transform hover:scale-105"
                       >
                        Edit
                       </Link>
                       <button
-                        className="bg-red-700 text-red-200 px-4 py-2 rounded-lg font-medium hover:bg-red-600 hover:text-white transition-all duration-200 transform hover:scale-105"
+                        className=" text-red-600 px-4 py-2 rounded-lg font-medium hover:bg-red-600 hover:text-white transition-all duration-200 transform hover:scale-105"
                         onClick={() => handleDelete(emp.id)}
                       >
                        Delete

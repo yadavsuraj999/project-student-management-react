@@ -46,9 +46,8 @@ const Employee = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 px-4 py-24 relative overflow-hidden">
       <div className="container mx-auto relative z-10 max-w-7xl">
-        {/* Heading */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-10">
-          <div>
+          <div className="mb-4 md:mb-0">
             <h4 className="text-4xl font-extrabold bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent pb-2 tracking-wide">
               Employee Directory
             </h4>
@@ -57,8 +56,7 @@ const Employee = () => {
             </p>
           </div>
 
-          {/* Filters and Button */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 w-full">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 w-full md:w-auto">
             <select
               id="department"
               value={filter.department}
@@ -73,7 +71,6 @@ const Employee = () => {
               <option value="Finance">Finance</option>
               <option value="Marketing">Marketing</option>
             </select>
-
             <input
               type="text"
               id="search"
@@ -84,7 +81,6 @@ const Employee = () => {
               }
               className="bg-gray-700 text-white px-6 py-2 rounded-xl font-semibold w-full sm:w-auto"
             />
-
             <button
               onClick={() => navigate("/addemployee")}
               className="inline-flex items-center justify-center w-full sm:w-auto space-x-2 bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-indigo-700 hover:to-blue-800 text-white px-6 py-3 rounded-xl font-semibold shadow-lg transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1"
@@ -95,7 +91,6 @@ const Employee = () => {
           </div>
         </div>
 
-        {/* Table or Empty State */}
         <div className="bg-gray-800 rounded-3xl shadow-2xl border border-gray-700 overflow-hidden">
           {filteredEmployee.length > 0 ? (
             <EmployeeTable
@@ -106,13 +101,9 @@ const Employee = () => {
             />
           ) : (
             <div className="text-center py-20 px-4">
-              <div className="text-7xl mb-6">👥</div>
               <h1 className="text-3xl font-bold text-gray-200 mb-4">
                 No Employees Found
               </h1>
-              <p className="text-gray-400 mb-8 max-w-md mx-auto">
-                Start building your team by adding your first employee
-              </p>
             </div>
           )}
         </div>
