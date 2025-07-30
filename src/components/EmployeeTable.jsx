@@ -56,7 +56,7 @@ const EmployeeTable = ({ employee, onDelete, sortArr, sorting }) => {
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="text-lg font-semibold text-green-400">
-                      💲{Number(emp.salary).toLocaleString()}
+                      ₹{Number(emp.salary).toLocaleString()}
                     </div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
