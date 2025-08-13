@@ -121,10 +121,10 @@ const Editemployee = () => {
                                 value={employee.department}
                             >
                                 <option value="">Choose a Department</option>
-                                <option value="1">Designing</option>
-                                <option value="2">Development</option>
-                                <option value="3">Finance</option>
-                                <option value="4">Sales And Marketing</option>
+                                <option value="Designing">Designing</option>
+                                <option value="Development">Development</option>
+                                <option value="Finance">Finance</option>
+                                <option value="Sales And Marketing">Sales And Marketing</option>
                             </select>
                             {error.department && <p className="text-red-500 text-sm mt-1">{error.department}</p>}
                         </div>
